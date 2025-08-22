@@ -1,0 +1,250 @@
+/* actual app look */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-section {
+  background-image: url('https://media.istockphoto.com/id/627281636/photo/earth-night-space.jpg?s=612x612&w=0&k=20&c=nJyJIXDX2InYCCcP3rIxFEhGmJ_x8cEmFK90CeD9Y0s=');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.bottom-section {
+  background-color: rgb(30, 29, 29);
+  min-height: 80vh; /* let it grow if needed */
+  width: 100%;
+  overflow-y: auto; /* scroll if content is taller */
+}
+
+.add-creator-btn {
+  background-color: cadetblue;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem; /* space below title */
+  margin-left: 20rem; /* shifts the button a bit right of the center */
+}
+.add-creator-btn:hover {
+  background-color: darkgreen;
+}
+
+.creatorverse-title {
+  display: flex;
+  justify-content: center; /*horizontal centering */
+  align-items: center; /* vertical centering if needed */
+  padding: 5rem 1rem;
+  text-decoration: none; /* removes underline */
+}
+
+.creatorverse-title h1 {
+  font-family: 'Bona Nova SC', serif;
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+/* this is for the AddCreator */
+.form-card {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.form-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: white;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+.form-card input,
+.form-card textarea {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-card button {
+  margin-top: 1rem;
+  background: cadetblue;
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-card button:hover {
+  background: darkgreen;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 1rem;
+}
+
+/* this is for the displaying creators on main page */
+.creator-card {
+  position: relative;
+  width: 250px;
+  min-height: 300px;
+  height: auto;
+  background-color: #444;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.creator-card:hover {
+  transform: scale(1.05);
+}
+
+.creator-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.creator-icons a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.creator-info {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+
+.creator-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.creator-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.creators-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  align-items: flex-start;
+}
+/* info icon */
+.view-creator-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(202, 191, 191, 0.05);
+  border-radius: 12px;
+}
+
+.creator-image {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.creator-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.creator-details h2 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+}
+
+.creator-details p {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.youtube-link {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: plum; /* youtube red */
+  text-decoration: none;
+  flex-wrap: wrap; /* allows children to wrap */
+  word-break: break-all; /* ensures long URLs break onto next line */
+}
+
+.youtube-link span {
+  word-break: break-all;
+}
+
+.youtube-link:hover {
+  text-decoration: underline;
+}
+
+.view-all-btn {
+  background-color: cadetblue;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.view-all-btn:hover {
+  background-color: green;
+}
